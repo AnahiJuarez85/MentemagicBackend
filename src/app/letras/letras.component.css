@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Sans serif';
+
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+}
+
+
+.header_nav{
+    width: 100%;
+    border-style:solid;
+    border-color: rgb(16, 11, 90);
+}
+
+.header_nav .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    /* Agrega estos estilos para centrar el h1 */
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  #titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    font-size: 48px;
+    color: #f8efef;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(45deg, #f8f2ef, #3d2574);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Agrega estos estilos para centrar el h1 verticalmente */
+    flex: 1;
+    margin-bottom: auto;
+  }
+  
+  .Inicio {
+    /* Elimina las propiedades position, top y left */
+    color: #fff;
+    background-color: #47afaa;
+    font-size: 15px;
+    padding: 5px 15px;
+  }
+  
+  .Inicio2 {
+    /* Elimina las propiedades position, top y right */
+    color: #fff;
+    background-color: #47afaa;
+    font-size: 15px;
+    padding: 5px 15px;
+  }
+
+.Inicio:hover {
+    background-color: #c3eee1; 
+    color: #0c0c0c; 
+  }
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px; /* Altura del contenedor ajustable según tus necesidades */
+  }
+  
+  .button-top, .button-bottom {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .button-top {
+    margin-bottom: auto;
+  }
+  
+  .button-bottom {
+    margin-top: auto;
+  }
+  
+
+.banner_title .Registrar{
+    color:#fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #2b4580;
+    font-size: 20px;
+    padding: 5px 15px;  
+    cursor: pointer;
+
+}
+.Registrar:hover {
+    background-color: #8e8fb9; 
+    color: #0c0c0c; }
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
