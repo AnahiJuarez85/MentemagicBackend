@@ -16,7 +16,7 @@ export class SpeechRecognitionService {
     return Observable.create(observer => {
       const { webkitSpeechRecognition }: IWindow = window;
       if (!webkitSpeechRecognition) {
-        observer.error('El reconocimiento de voz no es compatible en este navegador.');
+        observer.error('El reconocimiento de voz no es compatible con el navegador.');
         return;
       }
 

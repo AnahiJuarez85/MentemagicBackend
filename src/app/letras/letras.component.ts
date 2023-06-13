@@ -40,7 +40,7 @@ export class LetrasComponent implements OnInit {
 
         //console.log(e);
 
-        console.log('estoy buscando|' + texto + '|Tengo|' + e + '|');
+        console.log('estoy buscando|' + texto  + e + '|');
 
         if(texto.toUpperCase() == e.toUpperCase().trim()){
           this.detener();

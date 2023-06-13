@@ -10,8 +10,7 @@ const routes: Routes = [
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'home', component: HomeComponent },
   { path: 'principal',component:PrincipalComponent},
-  { path: 'letras', component:LetrasComponent},
-
+  { path: 'letras', component:LetrasComponent}
 
 ];
 
