@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/yeti/bootstrap.min.css" integrity="sha512-weyvl9mBvXvMHAcN2LCuQ5w0i7ihzrg3EQy6HixwCP88lXKbkL8IRYG8K75sCx1bRTQRDBXLfpW3fKlYfAAsaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MENTEMAGIC</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      
+    
+    </div>
+  </div>
+</nav>
+
+<div class="row mt-2">
+  <div class="col-lg-4 offset-lg-4">
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+      <div class="card-header text-center">Agregar Modulo</div>
+      <div class="card-body">
+
+        <form ngNativeValidate #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+          
+          <input type="text" class="form-control" placeholder="Ingrese letra" name="letra" ngModel required>
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Imagen de letra" name="imagenLetra" title="Se requiere una imagen .jpg" ngModel required pattern=".+\.jpg$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Audio de letra" name="audioLetra"  title="Se requiere un audio  .mp4." ngModel required pattern=".+\.mp4$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Imagen 1" name="imagen1"  title="Se requiere una imagen .png" ngModel required pattern=".+\.png$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Audio de imagen 1" name="audioImagen1" title="Se requiere un audio .mp4 ." ngModel required pattern=".+\.mp4$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Imagen 2" name="imagen2"  title="Se requiere una imagen .png" ngModel required pattern=".+\.png$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Audio de imagen 2" name="audioImagen2" title="Se requiere un audio .mp4" ngModel required pattern=".+\.mp4$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Imagen 3" name="imagen3"  title="Se requiere una imagen .png" ngModel required pattern=".+\.png$">
+          <input type="text" class="form-control mt-2" placeholder="Seleccione Audio de imagen 3" name="audioImagen3" title="Se requiere un audio .mp4" ngModel required pattern=".+\.mp4$">
+          
+          <div class="row mt-2 text-center">
+            <div class="col-lg-6">
+              <button type="submit" class="btn btn-primary">Aceptar</button>
+            </div>
+            <div class="col-lg-6">
+              <button routerLink="/ModuloLetras" type="button" class="btn btn-secondary">Volver</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+

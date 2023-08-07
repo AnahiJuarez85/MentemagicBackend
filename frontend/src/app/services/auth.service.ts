@@ -26,6 +26,8 @@ export class AuthService {
   }
 
   login(user: UserI): Observable<JwtResponseI> {
+    console.log(user);
+    
     return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/login`,
       user).pipe(tap(
         (res: JwtResponseI) => {

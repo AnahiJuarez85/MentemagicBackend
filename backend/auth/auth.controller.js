@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const SECRET_KEY = 'secretkey123456';
 
 exports.createUser = (req, res, next) => {
+
+  console.log('Llego aqui');
   const newUser = {
     name: req.body.name,
     email: req.body.email,
@@ -25,7 +27,7 @@ exports.createUser = (req, res, next) => {
       expiresIn: expiresIn
     }
     // response 
-    res.send({ dataUser });
+    res.send({ dataUser });   
   });
 }
 
@@ -60,14 +62,3 @@ exports.loginUser = (req, res, next) => {
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
-

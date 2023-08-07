@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/yeti/bootstrap.min.css" integrity="sha512-weyvl9mBvXvMHAcN2LCuQ5w0i7ihzrg3EQy6HixwCP88lXKbkL8IRYG8K75sCx1bRTQRDBXLfpW3fKlYfAAsaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MENTEMAGIC</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      
+      <form class="d-flex ms-auto">
+        <input class="form-control me-sm-2" type="search" placeholder="Search">
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="title"> <h4>Listado de Letras</h4>
+  <button type="button" class="btn btn-primary" routerLink="/add">Agregar Letra</button>
+</div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">letra</th>
+        <th scope="col">Imagen Letra</th>
+        <th scope="col">Audio Letra</th>
+        <th scope="col">Imagen 1 </th>
+        <th scope="col">Audio 1 </th>
+        <th scope="col">Imagen 2 </th>
+        <th scope="col">Audio 2 </th>
+        <th scope="col">Imagen 3 </th>
+        <th scope="col">Audio 3 </th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listletras" class="table-info">
+        
+        <td>{{ item.letra}}</td>
+        <th>{{ item.imagenLetra }}</th>
+        <td>{{ item.audioLetra }}</td>
+        <td>{{ item.imagen1 }}</td>
+        <td>{{ item.audioImagen1 }}</td>
+        <td>{{ item.imagen2 }}</td>
+        <td>{{ item.audioImagen2 }}</td>
+        <td>{{ item.imagen3 }}</td>
+        <td>{{ item.audioImagen3 }}</td>
+        
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" routerLink='/edit/{{item.id}}'>Editar</button>
+          <button type="button" class="btn btn-secondary btn-sm ms-3" >Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

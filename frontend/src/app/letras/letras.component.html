@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 <main class="fondo">
-  <section class="header_nav">
+  <section class="border border-light">
     <div class="row">
       <div class="col-md-2">
         <button type="button" class="btn btn-success" routerLink ="/principal">
@@ -13,60 +13,54 @@
         </button>
       </div>
       <div class="col-md-8">
-          <h1 id="titulo">vocal "o"</h1>
+          <h1 id="titulo">vocal "{{id}}"</h1>
       </div>
       <div class="col-md-2 text-right">
-        <button type="button" class="btn btn-primary" routerLink ="/principal">Siguiente
+        <button type="button" class="btn btn-primary" routerLink ="/principal">Siguiente!
           <i class="bi bi-arrow-right"></i>
         </button>
       </div>
     </div>
   </section>
-  <section class="header_nav">
-      <div class="row">
-          <div class="container col-md-6">
-            <button (click)="playAudio()" class="button-top">
-              Escuchar
-              <i class="bi bi-volume-down"></i></button>
-            <button class="button-bottom">
-              Pronunciar
-              <i class="bi bi-mic-fill"></i>
-            </button>
-          </div>
+  <section>
+      <div class="row border border-light">
           <div class="col-md-6">
-            <img class="img-fluid" src="assets/img/O.png" >
+            <div class="h-50 d-flex flex-column justify-content-center">
+              <button (click)="playAudio(id)" class="btn btn-success">
+                Escuchar
+                <i class="bi bi-volume-down"></i>
+              </button>
+              <i class="bi bi-check2-circle"*ngIf="mostrar"></i>
+            </div>
+            <div class="h-50 d-flex flex-column justify-content-center">
+              <button (click)="pronunciar(id)" class="btn btn-primary">
+                Pronunciar
+                <i class="bi bi-mic-fill"></i>
+              </button>
+              <i id={{id}} class="bi bi-check2-circle" hidden="true"></i>
+            </div>
+            </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="assets/img/{{id}}.jpg" >
         </div>
       </div>
       <br><br>
     <div class="row">
-        <div class="col-md-4">
-          <img class="img-fluid" src="assets/img/oso.png">
-        </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="assets/img/olla.png">
-        </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="assets/img/ojo.png">
+        <div class="col-md-4" *ngFor="let imagen of imagenesMostradas">
+            <img class="img-fluid" [src]="imagen" [alt]="imagen">
         </div>
     </div>
     <div class="row">
-      <div class="col-md-4 text-center">
-        <button (click)="audioOso()" class="button-top">
+      <div class="col-md-4 text-center" *ngFor="let audio of audiosCargados">
+        <button (click)="playAudio(audio)" class="btn btn-success">
           Escuchar
           <i class="bi bi-volume-down"></i>
         </button>
-      </div>
-      <div class="col-md-4 text-center">
-        <button (click)="audioOlla()" class="button-top">
-          Escuchar
-          <i class="bi bi-volume-down"></i>
+        <button (click)="pronunciar(audio)" class="btn btn-primary">
+          Pronunciar
+          <i class="bi bi-mic-fill"></i> 
         </button>
-      </div>
-      <div class="col-md-4 text-center">
-        <button (click)="audioOjo()" class="button-top">
-          Escuchar
-          <i class="bi bi-volume-down"></i>
-        </button>
+        <i [id]="audio" class="bi bi-check2-circle" hidden="true"></i>
       </div>
   </div>
   </section> 
