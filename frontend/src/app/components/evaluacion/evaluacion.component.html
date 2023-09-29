@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/yeti/bootstrap.min.css" integrity="sha512-weyvl9mBvXvMHAcN2LCuQ5w0i7ihzrg3EQy6HixwCP88lXKbkL8IRYG8K75sCx1bRTQRDBXLfpW3fKlYfAAsaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MENTEMAGIC</a>
+    
+  </div>
+</nav>
+
+<div class="row mt-2">
+  <div class="col-lg-4 offset-lg-4">
+    <div class="card border-primary mb-3" style="max-width: 30rem;">
+      <div class="card-header text-center">Agregar Una Nueva Evaluación</div>
+      <div class="card-body">
+        <label for="instrucciones" style="margin-bottom: 10px;">Ingrese las letras que necesite evaluar </label>
+
+        <form ngNativeValidate #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+          
+          <input type="text" class="form-control" style="margin-bottom: 10px;" placeholder="Ingrese la primera letra" name="letra" ngModel required>
+          <input type="text" class="form-control" style="margin-bottom: 10px;" placeholder="Ingrese la segunda letra" name="letra" ngModel required>
+          <input type="text" class="form-control" style="margin-bottom: 10px;" placeholder="Ingrese la tercera letra" name="letra" ngModel required>
+          <input type="text" class="form-control" style="margin-bottom: 10px;" placeholder="Ingrese la cuarta letra" name="letra" ngModel required>
+          <input type="text" class="form-control" style="margin-bottom: 10px;" placeholder="Ingrese la quita letra" name="letra" ngModel required>
+
+          <div class="row mt-2 text-center">
+            <div class="col-lg-6">
+              <button type="submit" class="btn btn-primary">Aceptar
+                
+                <div class="main-content">
+
+                 <button *ngIf="showButton" (click)="navigateToModule()">Ir al Módulo de Letras</button>
+                </div>
+
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <button routerLink="/ModuloEvaluaciones" type="button" class="btn btn-secondary">Volver</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+

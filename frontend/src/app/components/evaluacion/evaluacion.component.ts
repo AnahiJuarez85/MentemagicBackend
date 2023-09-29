@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { LetterService } from '../../services/letter.service';
 
 @Component({
-  selector: 'app-add-edit',
-  templateUrl: './add-edit.component.html',
-  styleUrls: ['./add-edit.component.css']
+  selector: 'app-evaluacion.component',
+  templateUrl: './evaluacion.component.html',
+  styleUrls: ['./evaluacion.component.css']
 })
-export class AddEditComponent implements OnInit {
+export class Evaluacioncomponent implements OnInit {
 
   showButton = false;
 

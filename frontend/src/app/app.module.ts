@@ -13,6 +13,10 @@ import { AddEditComponent } from './components/add-edit/add-edit.component';
 import { ModulosLetrasComponent } from './components/modulos-letras/modulos-letras.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StadisticsComponent } from './stadistics/stadistics.component';
+import { PruebasComponent } from './pruebas/pruebas.component';
+import { Evaluacioncomponent } from './components/evaluacion/evaluacion.component';
+import { tableEvaluationcomponent } from './components/evaluacion/tableEvaluation.component';
+import { moduloAdmincomponent } from './admi/moduloAdmin.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { StadisticsComponent } from './stadistics/stadistics.component';
     AddEditComponent,
     ModulosLetrasComponent,
     StadisticsComponent,
+    PruebasComponent,
+    Evaluacioncomponent,
+    tableEvaluationcomponent,
+    moduloAdmincomponent,
   ],
   imports: [
     HttpClientModule,

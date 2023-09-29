@@ -5,7 +5,7 @@ const SECRET_KEY = 'secretkey123456';
 const letraSchema = require('./letters.model');
 
 exports.createLetter = (req, res, next) => {
-
+ 
   const newLetter = {
     letra: req.body.letra,
     imagenLetra: req.body.imagenLetra,

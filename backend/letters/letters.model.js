@@ -13,5 +13,12 @@ const letraSchema = new Schema({
     imagen3:{ type: String, required: true },
     audioImagen3: { type: String, required: true }
 });
-
+const pruebaSchema = new Schema({
+    letra:{ type: String, required: true },
+    letra:{ type: String, required: true },
+    letra:{ type: String, required: true },
+    letra:{ type: String, required: true },
+    letra:{ type: String, required: true },
+    
+});
 module.exports = letraSchema;

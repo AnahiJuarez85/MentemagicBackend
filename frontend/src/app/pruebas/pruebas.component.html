@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.1/vapor/bootstrap.min.css" integrity="sha512-2fK22FvVybbNKpxfcvNSO+JNGBSC0dX2HTO9FtQdArdrJkbfljn716mY08pf1rEMZPfeItKcErFgfuJv0huBRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MENTEMAGIC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+      </ul>
+      <form class="d-flex">    
+        <button class="btn btn-secondary my-2 my-sm-0" routerLink ="/principal">Salir</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container1">
+  <div class="title"> <h4>Comprueba tu aprendizaje</h4>
+    <button (click)="playAudio('Instrucciones.mp4')" class="btn btn-success">
+      Instrucciones
+      <i class="bi bi-volume-down"></i>
+    </button>
+</div>
+<br>
+<body>
+  <div class="container" *ngFor="let imagenes of imagenesMostradas">
+    <div class="izquierda">
+      <button [id]="imagenes[0] + 'i'" (click)="selectLeftImage(imagenes[0])" type="button" class="btn btn-outline-dark">
+        <img class="img-fluid" [src]="imagenes[1]">
+      </button>       
+    </div>  
+    <div class="derecha">
+      <div class="row">
+        <button [id]="imagenes[0] + 'd'" (click)="selectRightImage(imagenes[0])" type="button" class="btn btn-outline-dark">
+          <img class="img-fluid" [src]="'assets/img/' + imagenes[0] + '.jpg'">
+        </button>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div class="text-center">
+    <img id="resultado" class="img-fluid" src="{{resultado}}">
+  </div>
+</body>

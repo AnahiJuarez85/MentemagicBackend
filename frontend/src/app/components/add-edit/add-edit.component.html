@@ -29,8 +29,17 @@
           
           <div class="row mt-2 text-center">
             <div class="col-lg-6">
-              <button type="submit" class="btn btn-primary">Aceptar</button>
-            </div>
+
+              <button type="submit" class="btn btn-primary">Aceptar
+                <!-- app.component.html -->
+                <div class="main-content">
+ 
+                 <button *ngIf="showButton" (click)="navigateToModule()">Ir al Módulo de Letras</button>
+                </div>
+
+              </button>
+
+           </div>
             <div class="col-lg-6">
               <button routerLink="/ModuloLetras" type="button" class="btn btn-secondary">Volver</button>
             </div>

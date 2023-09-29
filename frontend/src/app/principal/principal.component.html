@@ -18,4 +18,15 @@
         <button *ngFor="let boton of botones" [routerLink]="['/letras', boton]">{{ boton }}</button>
       </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+        <h1 id="titulo">DEMUESTRA TUS CONOCIMIENTOS</h1>
+        <h2 class="text-center">PRUEBAS</h2>
+    </div>
+  </div>
+  <div class="path">
+    <div class="path">
+      <button *ngFor="let prueba of pruebas" [routerLink]="['/prueba', prueba]">{{ prueba }}</button>
+    </div>
+  </div>
               
