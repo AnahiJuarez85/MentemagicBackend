@@ -7,7 +7,11 @@ const DB = require('./config/db');
 // init DB
 DB();
 
+const helmet = require('helmet');
+
 const app = express();
+app.use(helmet());
+
 const router = express.Router();
 
 const bodyParser = require('body-parser');
@@ -17,6 +21,11 @@ const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 app.use(bodyParserJSON);
 app.use(bodyParserURLEncoded);
 
+const corsOptions = {
+  origin: 'http://localhost:4200',
+};
+
+//app.use(cors(corsOptions));
 app.use(cors());
 
 app.use('/api', router);

@@ -15,7 +15,7 @@ exports.createUser = (req, res, next) => {
   User.create(newUser, (err, user) => {
     if (err && err.code === 11000) return res.status(409).send('Email already exists');
     if (err) return res.status(500).send(err);
-    const expiresIn = 24 * 60 * 60;
+    const expiresIn =  1* 60 * 60;
     const accessToken = jwt.sign({ id: user.id },
       SECRET_KEY, {
         expiresIn: expiresIn
@@ -45,7 +45,7 @@ exports.loginUser = (req, res, next) => {
     } else {
       const resultPassword = bcrypt.compareSync(userData.password, user.password);
       if (resultPassword) {
-        const expiresIn = 24 * 60 * 60;
+        const expiresIn = 1 * 60 * 60;
         const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: expiresIn });
 
         const dataUser = {
